@@ -1,5 +1,5 @@
 export const Header = () => (
   <div>
-    <div>This is the header</div>
+    <div className='text-gray-500'>This is the header</div>
   </div>
 )
