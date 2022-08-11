@@ -1,4 +1,4 @@
-import { ThemeToggle } from './themeToggle'
+import { ThemeToggle } from './theme-toggle'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
