@@ -29,11 +29,9 @@ export const ThemeToggle = () => {
   }
 
   return (
-    <div>
-      <label className='relative cursor-pointer'>
-        <input type='checkbox' className='sr-only peer' checked={enabled} />
-        <div onClick={() => toggleTheme()} className={toggleStyles}></div>
-      </label>
-    </div>
+    <label className='relative cursor-pointer mt-3'>
+      <input type='checkbox' className='sr-only peer' checked={enabled} />
+      <div onClick={() => toggleTheme()} className={toggleStyles}></div>
+    </label>
   )
 }
