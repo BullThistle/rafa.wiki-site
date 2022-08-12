@@ -11,6 +11,12 @@ const toggleStyles = `
 
 export const ThemeToggle = () => {
   const [theme, setTheme] = useState<string | null>(null)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(
+    () => setIsMobile(/Mobi/.test(window.navigator.userAgent)),
+    [setIsMobile]
+  )
 
   useEffect(() => {
     const themeFromStorage = localStorage.getItem('theme')
@@ -44,7 +50,8 @@ export const ThemeToggle = () => {
         type='checkbox'
         className='sr-only peer'
         checked={theme === 'light' ? false : true}
-        onClick={() => toggleTheme()}
+        onClick={() => !isMobile && toggleTheme()}
+        onTouchStart={() => isMobile && toggleTheme()}
         // Empty function to suppress react error saying onChange
         // is needed when checked is used. Using onClick instead
         onChange={() => {}}
