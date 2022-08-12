@@ -39,10 +39,10 @@ export const ThemeToggle = () => {
   if (!theme) return null
 
   return (
-    <label className='relative cursor-pointer mt-3'>
+    <label className='relative mt-3'>
       <input
         type='checkbox'
-        className='sr-only peer'
+        className='sr-only peer cursor-pointer'
         checked={theme === 'light' ? false : true}
         onClick={() => toggleTheme()}
         // Empty function to suppress react error saying onChange
