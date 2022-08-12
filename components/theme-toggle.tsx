@@ -32,8 +32,12 @@ export const ThemeToggle = () => {
         type='checkbox'
         className='sr-only peer'
         checked={theme === 'light' ? false : true}
+        onClick={() => toggleTheme()}
+        // Empty function to suppress react error saying onChange
+        // is needed when checked is used. Using onClick instead
+        onChange={() => {}}
       />
-      <div onClick={() => toggleTheme()} className={toggleStyles}></div>
+      <div className={toggleStyles}></div>
     </label>
   )
 }
