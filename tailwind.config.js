@@ -1,5 +1,9 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
+  purge: {
+    options: {
+      safelist: ['dark']
+    }
+  },
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}'
