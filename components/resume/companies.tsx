@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import Link from 'next/link'
 
 interface Company {
   role: string
@@ -87,7 +88,9 @@ export const Companies: FC = () => (
       ) => (
         <div key={`${name} + ${id}`} className='mt-3'>
           <p className=' text-base font-bold'>{`${role}, ${name}`}</p>
-          <p>{website}</p>
+          <div className='text-purple'>
+            <Link href={`https://${website}`}>{website}</Link>
+          </div>
           <p>{location}</p>
           <p>{dates}</p>
           <p className='mt-2 font-bold'>TECHNOLOGIES:</p>
