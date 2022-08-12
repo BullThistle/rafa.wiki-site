@@ -1,14 +1,14 @@
 import type { NextPage } from 'next'
 import { Footer } from '../components/footer'
 import { Header } from '../components/header'
-import { Profile } from '../components/profile'
+import { About } from '../components/about'
 
 const Home: NextPage = () => {
   return (
     <div className='max-w-sm mx-auto mt-10'>
       <div className='flex flex-col gap-6'>
         <Header />
-        <Profile />
+        <About />
         <Footer />
       </div>
     </div>
