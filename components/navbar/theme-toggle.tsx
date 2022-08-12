@@ -4,7 +4,7 @@ const toggleStyles = `
 		w-11 h-6 bg-gray rounded-full peer
 		peer-checked:after:translate-x-full after:absolute
 		after:bottom-3.5 after:right-[20px] after:bg-white
-		 after:border after:border-purple
+		after:border-2 after:border-purple 
 		after:rounded-full after:h-7 after:w-7 after:absolute
 		after:transition-all peer-checked:bg-purple
 	`
