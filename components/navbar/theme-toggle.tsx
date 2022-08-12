@@ -18,9 +18,11 @@ export const ThemeToggle = () => {
       .matches
       ? 'dark'
       : 'light'
+    console.log('setTheme:', themeFromStorage ?? systemTheme)
     setTheme(themeFromStorage ?? systemTheme)
   }, [])
 
+  console.log('theme outside of hooks', theme)
   useEffect(() => {
     if (!theme) return
     const cl = document.documentElement.classList
