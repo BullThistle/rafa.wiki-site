@@ -35,7 +35,7 @@ export const ThemeToggle = () => {
     if (theme === 'dark') setTheme('light')
   }
 
-  if (!theme) return
+  if (!theme) return null
 
   return (
     <label className='relative cursor-pointer mt-3'>
