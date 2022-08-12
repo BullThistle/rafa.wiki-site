@@ -8,8 +8,8 @@ const unselectedStyles = 'hover:purple dark:text-white'
 export const Navbar = () => {
   const { pathname } = useRouter()
   return (
-    <nav className='py-3 px-[30%]'>
-      <div className='container flex justify-between mx-auto'>
+    <nav className='py-3'>
+      <div className='container py-3 flex justify-between mx-auto max-w-xs sm:max-w-md md:max-w-lg'>
         <div className='mb-1 self-center text-xl font-semibold'>
           <Link href='/'>rafa.wiki</Link>
         </div>
