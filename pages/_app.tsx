@@ -1,11 +1,17 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { Layout } from '../components/layout'
+import Head from 'next/head'
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <Layout>
-    <Component {...pageProps} />
-  </Layout>
+  <>
+    <Head>
+      <title>Rafa Wiki</title>
+    </Head>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  </>
 )
 
 export default MyApp
