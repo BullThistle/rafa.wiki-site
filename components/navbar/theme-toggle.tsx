@@ -13,14 +13,17 @@ export const ThemeToggle = () => {
   const [theme, setTheme] = useState(
     typeof window === 'undefined' ? 'light' : localStorage.theme
   )
-  console.log('storage theme', localStorage.theme)
+  console.log(
+    'storage theme',
+    typeof window === 'undefined' ? 'window is undefined' : localStorage.theme
+  )
 
   useEffect(() => {
     const cl = document.documentElement.classList
     cl.remove(theme === 'dark' ? 'light' : 'dark')
     cl.add(theme)
     localStorage.theme = theme
-		console.log('set localStorageTheme', localStorage.theme)
+    console.log('set localStorageTheme', localStorage.theme)
   }, [theme])
 
   const toggleTheme = () => {
