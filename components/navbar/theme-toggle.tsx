@@ -45,18 +45,19 @@ export const ThemeToggle = () => {
   if (!theme) return null
 
   return (
-    <label className='relative mt-3 cursor-pointer'>
+    <div
+      onClick={() => !isMobile && toggleTheme()}
+      onTouchStart={() => isMobile && toggleTheme()}
+      className='relative mt-3 cursor-pointer'>
       <input
         type='checkbox'
         className='sr-only peer'
         checked={theme === 'light' ? false : true}
-        onClick={() => !isMobile && toggleTheme()}
-        onTouchStart={() => isMobile && toggleTheme()}
         // Empty function to suppress react error saying onChange
         // is needed when checked is used. Using onClick instead
         onChange={() => {}}
       />
       <div className={toggleStyles}></div>
-    </label>
+    </div>
   )
 }
