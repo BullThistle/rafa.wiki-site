@@ -9,7 +9,7 @@ export const Layout = ({
     className={`
 			h-screen
 			bg-white dark:bg-black
-			text-slate-700 dark:text-white
+			text-black dark:text-white
 		`}>
     <Navbar />
     {children}
