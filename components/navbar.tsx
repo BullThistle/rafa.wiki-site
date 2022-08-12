@@ -2,8 +2,8 @@ import { ThemeToggle } from './theme-toggle'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-const selectedStyles = 'text-indigo-800 hover:text-indigo-800'
-const unselectedStyles = 'hover:text-indigo-800 dark:text-white'
+const selectedStyles = 'text-purple'
+const unselectedStyles = 'hover:purple dark:text-white'
 
 export const Navbar = () => {
   const { pathname } = useRouter()

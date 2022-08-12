@@ -8,7 +8,7 @@ export const Layout = ({
   <div
     className={`
 			h-screen
-			bg-white dark:bg-slate-800
+			bg-white dark:bg-black
 			text-slate-700 dark:text-white
 		`}>
     <Navbar />

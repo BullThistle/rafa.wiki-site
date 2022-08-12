@@ -19,7 +19,7 @@ const Resume = () => (
           <Companies />
         </div>
       </div>
-      <div className='flex-1 flex-col border-l-2 pl-3'>
+      <div className='flex-1 flex-col pl-3 border-l-2 border-light-gray dark:border-gray'>
         <RightColumnItems />
       </div>
     </div>
