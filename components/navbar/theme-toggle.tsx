@@ -10,15 +10,18 @@ const toggleStyles = `
 	`
 
 export const ThemeToggle = () => {
-  const [theme, setTheme] = useState<string | undefined>(undefined)
+  const [theme, setTheme] = useState<string | null>(null)
   console.log(
     'storage theme',
     typeof window === 'undefined' ? 'window is undefined' : localStorage.theme
   )
 
+  const initialTheme =
+    typeof window === 'undefined' ? null : localStorage.getItem('theme')
+
   useEffect(() => {
-    setTheme(localStorage.theme)
-  }, [])
+    if (initialTheme && !theme) setTheme(initialTheme)
+  }, [initialTheme, theme])
 
   useEffect(() => {
     if (!theme) return
