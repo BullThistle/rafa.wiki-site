@@ -5,12 +5,7 @@ export const Layout = ({
 }: {
   children: JSX.Element | JSX.Element[]
 }) => (
-  <div
-    className={`
-			h-screen
-			bg-white dark:bg-black
-			text-black dark:text-white
-		`}>
+  <div className={`h-screen`}>
     <Navbar />
     {children}
   </div>
