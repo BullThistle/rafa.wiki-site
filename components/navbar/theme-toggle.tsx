@@ -26,6 +26,7 @@ export const ThemeToggle = () => {
     const cl = document.documentElement.classList
     cl.remove(theme === 'dark' ? 'light' : 'dark')
     cl.add(theme)
+    console.log('theme in use effect', theme)
     localStorage.setItem('theme', theme)
     console.log('set localStorageTheme', localStorage.theme)
   }, [theme])
