@@ -35,9 +35,9 @@ const columnItems: ColumnItem[] = [
 export const RightColumnItems: FC = () => (
   <>
     {columnItems.map(({ name, items }, nameId) => (
-      <div key={`${name} + ${nameId}`} className='mb-3'>
+      <div key={`${name} + ${nameId}`} className='mb-3 ml-3'>
         <p className='font-bold'>{name}</p>
-        <div className='mt-1 ml-3 text-sm'>
+        <div className='mt-1 text-sm'>
           {items.map((item, itemId) => (
             <p key={`${item} + ${itemId}`}>{item}</p>
           ))}

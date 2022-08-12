@@ -3,8 +3,8 @@ import { RightColumnItems } from '../components/resume/right-column-items'
 
 const Resume = () => (
   <div className='justify-center flex'>
-    <div className='dark:text-white flex flex-auto max-w-5xl flex-nowrap mb-20'>
-      <div className='flex-auto max-w-2xl pr-8'>
+    <div className='sm:flex sm:flex-auto sm:flex-nowrap max-w-4xl mb-20'>
+      <div className='flex-auto max-w-2xl pr-8 pl-8'>
         <p className='text-2xl font-bold top-16 left-7'>RAFAEL FURRY</p>
         <p className='text-sm'>Full Stack Developer</p>
         <p className='mt-5 font-bold'>PROFILE</p>
@@ -19,7 +19,7 @@ const Resume = () => (
           <Companies />
         </div>
       </div>
-      <div className='flex-1 flex-col pl-3 border-l-2 border-light-gray dark:border-gray'>
+      <div className='pl-8 mt-3 sm:pl-3 sm:mt-0  sm:flex-1 sm:flex-col sm:pr-8 sm:border-l-2 sm:border-light-gray sm:dark:border-gray'>
         <RightColumnItems />
       </div>
     </div>
