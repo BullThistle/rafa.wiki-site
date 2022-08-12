@@ -33,7 +33,7 @@ export const ThemeToggle = () => {
 
   const toggleTheme = () => {
     console.log('toggle theme', theme)
-    if (theme === 'light') setTheme('dark')
+    if (theme === 'light' || !theme) setTheme('dark')
     if (theme === 'dark') setTheme('light')
   }
 
@@ -44,7 +44,7 @@ export const ThemeToggle = () => {
       <input
         type='checkbox'
         className='sr-only peer'
-        checked={theme === 'light' ? false : true}
+        checked={theme === 'light' || !theme ? false : true}
         onClick={() => toggleTheme()}
         // Empty function to suppress react error saying onChange
         // is needed when checked is used. Using onClick instead
