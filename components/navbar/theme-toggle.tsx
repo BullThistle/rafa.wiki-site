@@ -10,15 +10,18 @@ const toggleStyles = `
 	`
 
 export const ThemeToggle = () => {
-  const [theme, setTheme] = useState(
-    typeof window === 'undefined' ? 'light' : localStorage.theme
-  )
+  const [theme, setTheme] = useState<string | undefined>(undefined)
   console.log(
     'storage theme',
     typeof window === 'undefined' ? 'window is undefined' : localStorage.theme
   )
 
   useEffect(() => {
+    setTheme(localStorage.theme)
+  }, [])
+
+  useEffect(() => {
+    if (!theme) return
     const cl = document.documentElement.classList
     cl.remove(theme === 'dark' ? 'light' : 'dark')
     cl.add(theme)
@@ -31,6 +34,8 @@ export const ThemeToggle = () => {
     if (theme === 'light') setTheme('dark')
     if (theme === 'dark') setTheme('light')
   }
+
+  if (!theme) return
 
   return (
     <label className='relative cursor-pointer mt-3'>
