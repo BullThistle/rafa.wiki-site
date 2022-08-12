@@ -19,7 +19,9 @@ export const ThemeToggle = () => {
       ? 'dark'
       : 'light'
     console.log('setTheme:', themeFromStorage ?? systemTheme)
-    setTheme('light')
+    if (!!themeFromStorage) setTheme(themeFromStorage)
+    else if (!!systemTheme) setTheme(systemTheme)
+    else setTheme('light')
   }, [])
 
   console.log('theme outside of hooks', theme)
@@ -35,7 +37,7 @@ export const ThemeToggle = () => {
 
   const toggleTheme = () => {
     console.log('toggle theme', theme)
-    if (theme === 'light' || !theme) setTheme('dark')
+    if (theme === 'light') setTheme('dark')
     if (theme === 'dark') setTheme('light')
   }
 
@@ -46,7 +48,7 @@ export const ThemeToggle = () => {
       <input
         type='checkbox'
         className='sr-only peer'
-        checked={theme === 'light' || !theme ? false : true}
+        checked={theme === 'light' ? false : true}
         onClick={() => toggleTheme()}
         // Empty function to suppress react error saying onChange
         // is needed when checked is used. Using onClick instead
