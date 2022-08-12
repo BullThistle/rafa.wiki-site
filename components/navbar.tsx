@@ -11,7 +11,7 @@ export const Navbar = () => {
     <nav className='py-3 px-[30%]'>
       <div className='container flex justify-between mx-auto'>
         <div className='mb-1 self-center text-xl font-semibold'>
-          <Link href='/'>rafa.dev</Link>
+          <Link href='/'>rafa.wiki</Link>
         </div>
         <div className='w-full pl-3 text-gray-700'>
           <ul className='flex flex-row p-4 space-x-8 mt-0 text-sm font-medium'>
