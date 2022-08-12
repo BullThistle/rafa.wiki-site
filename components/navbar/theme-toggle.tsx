@@ -19,7 +19,7 @@ export const ThemeToggle = () => {
       ? 'dark'
       : 'light'
     console.log('setTheme:', themeFromStorage ?? systemTheme)
-    setTheme(themeFromStorage ?? systemTheme)
+    setTheme('light')
   }, [])
 
   console.log('theme outside of hooks', theme)
