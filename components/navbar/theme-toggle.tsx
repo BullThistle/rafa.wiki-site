@@ -18,25 +18,20 @@ export const ThemeToggle = () => {
       .matches
       ? 'dark'
       : 'light'
-    console.log('setTheme:', themeFromStorage ?? systemTheme)
     if (!!themeFromStorage) setTheme(themeFromStorage)
     else if (!!systemTheme) setTheme(systemTheme)
     else setTheme('light')
   }, [])
 
-  console.log('theme outside of hooks', theme)
   useEffect(() => {
     if (!theme) return
     const cl = document.documentElement.classList
     cl.remove(theme === 'dark' ? 'light' : 'dark')
     cl.add(theme)
-    console.log('theme in use effect', theme)
     localStorage.setItem('theme', theme)
-    console.log('set localStorageTheme', localStorage.theme)
   }, [theme])
 
   const toggleTheme = () => {
-    console.log('toggle theme', theme)
     if (theme === 'light') setTheme('dark')
     if (theme === 'dark') setTheme('light')
   }
