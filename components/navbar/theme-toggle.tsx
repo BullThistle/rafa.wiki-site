@@ -11,24 +11,22 @@ const toggleStyles = `
 
 export const ThemeToggle = () => {
   const [theme, setTheme] = useState<string | null>(null)
-  console.log(
-    'storage theme',
-    typeof window === 'undefined' ? 'window is undefined' : localStorage.theme
-  )
-
-  const initialTheme =
-    typeof window === 'undefined' ? null : localStorage.getItem('theme')
 
   useEffect(() => {
-    if (initialTheme && !theme) setTheme(initialTheme)
-  }, [initialTheme, theme])
+    const themeFromStorage = localStorage.getItem('theme')
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
+      .matches
+      ? 'dark'
+      : 'light'
+    setTheme(themeFromStorage ?? systemTheme)
+  }, [])
 
   useEffect(() => {
     if (!theme) return
     const cl = document.documentElement.classList
     cl.remove(theme === 'dark' ? 'light' : 'dark')
     cl.add(theme)
-    localStorage.theme = theme
+    localStorage.setItem('theme', theme)
     console.log('set localStorageTheme', localStorage.theme)
   }, [theme])
 
