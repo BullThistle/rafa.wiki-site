@@ -7,9 +7,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
   <>
     <Head>
       <title>Rafa Wiki</title>
-      <meta name='apple-mobile-web-app-status-bar-style' content='default'>
-			black
-			</meta>
+      <meta name='apple-mobile-web-app-status-bar-style' content='default' />
     </Head>
     <Layout>
       <Component {...pageProps} />
