@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
+import { ThemeProps } from '../../hooks/useTheme'
 
 const toggleStyles = `
 		w-11 h-6 bg-gray rounded-full peer
@@ -9,38 +10,13 @@ const toggleStyles = `
 		after:transition-all peer-checked:bg-purple
 	`
 
-export const ThemeToggle = () => {
-  const [theme, setTheme] = useState<string | null>(null)
+export const ThemeToggle: FC<ThemeProps> = ({ theme, toggleTheme }) => {
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(
     () => setIsMobile(/Mobi/.test(window.navigator.userAgent)),
     [setIsMobile]
   )
-
-  useEffect(() => {
-    const themeFromStorage = localStorage.getItem('theme')
-    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
-      .matches
-      ? 'dark'
-      : 'light'
-    if (!!themeFromStorage) setTheme(themeFromStorage)
-    else if (!!systemTheme) setTheme(systemTheme)
-    else setTheme('light')
-  }, [])
-
-  useEffect(() => {
-    if (!theme) return
-    const cl = document.documentElement.classList
-    cl.remove(theme === 'dark' ? 'light' : 'dark')
-    cl.add(theme)
-    localStorage.setItem('theme', theme)
-  }, [theme])
-
-  const toggleTheme = () => {
-    if (theme === 'light') setTheme('dark')
-    if (theme === 'dark') setTheme('light')
-  }
 
   if (!theme) return null
 

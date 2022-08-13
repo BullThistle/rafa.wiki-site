@@ -1,8 +1,10 @@
 import { ThemeToggle } from './theme-toggle'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { FC } from 'react'
+import { ThemeProps } from '../../hooks/useTheme'
 
-export const Navbar = () => {
+export const Navbar: FC<ThemeProps> = ({ theme, toggleTheme }) => {
   const { pathname } = useRouter()
   return (
     <nav className='py-3'>
@@ -23,7 +25,7 @@ export const Navbar = () => {
             </li>
           </ul>
         </div>
-        <ThemeToggle />
+        <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
       </div>
     </nav>
   )
