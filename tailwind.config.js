@@ -24,11 +24,5 @@ module.exports = {
       'light-gray': '#B3B3B3'
     }
   },
-  variants: {
-    extend: {
-      backgroundColor: ['dark'],
-      textColor: ['dark']
-    }
-  },
   plugins: []
 }
