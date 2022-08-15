@@ -20,7 +20,7 @@ const companies: Company[] = [
     location: 'Seattle, WA',
     dates: 'December 2018 - August 2022',
     technologies:
-      'TypeScript, GraphQL, React Native, React, Redux, React Navigation, Jest, Apollo Client, Detox, Node, Apollo Server, Prisma, PostgreSQL, Redis, Bitrise, Sentry',
+      'TypeScript, GraphQL, React Native, React, Redux, React Navigation, Jest, Cypress, Apollo Client, Detox, Node, Apollo Server, Prisma, PostgreSQL, Redis, Bitrise, Sentry',
     achievements: [
       'Introduced React Hooks to the team and created a strategy to piecemeal refactor from Recompose to Hooks.',
       'Introduced Redux Toolkit to simplify our global state management and improve performance.',
