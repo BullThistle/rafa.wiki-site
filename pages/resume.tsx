@@ -19,7 +19,11 @@ const Resume = () => (
           <Companies />
         </div>
       </div>
-      <div className='pl-8 mt-3 sm:pl-3 sm:mt-0  sm:flex-1 sm:flex-col sm:pr-8 sm:border-l-2 sm:border-light-gray sm:dark:border-gray'>
+      <div
+        className={`
+					pl-8 mt-3 sm:pl-3 sm:mt-0  sm:flex-1 sm:flex-col sm:pr-8
+					sm:border-l-2 sm:border-light-gray sm:dark:border-gray
+				`}>
         <RightColumnItems />
       </div>
     </div>
