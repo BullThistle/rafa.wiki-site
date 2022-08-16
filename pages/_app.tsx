@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { Navbar } from '../components/navbar'
 import { ThemeProvider, useTheme } from 'next-themes'
-import { FC } from 'react'
+import { FC, useEffect, useState } from 'react'
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => (
   <ThemeProvider attribute='class'>
@@ -15,7 +15,13 @@ const AppContents: FC<Pick<AppProps, 'Component' | 'pageProps'>> = ({
   Component,
   pageProps
 }) => {
+  const [mounted, setMounted] = useState(false)
   const { theme } = useTheme()
+
+  useEffect(() => setMounted(true), [])
+
+  if (!mounted) return null
+
   return (
     <>
       <Head>
