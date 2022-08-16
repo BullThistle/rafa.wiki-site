@@ -1,5 +1,5 @@
+import { useTheme } from 'next-themes'
 import { FC, useEffect, useState } from 'react'
-import { ThemeProps } from '../../hooks/useTheme'
 
 const toggleStyles = `
 		w-11 h-6 bg-gray rounded-full peer
@@ -10,7 +10,8 @@ const toggleStyles = `
 		after:transition-all peer-checked:bg-purple
 	`
 
-export const ThemeToggle: FC<ThemeProps> = ({ theme, toggleTheme }) => {
+export const ThemeToggle: FC = () => {
+  const { theme, setTheme } = useTheme()
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(
@@ -20,10 +21,12 @@ export const ThemeToggle: FC<ThemeProps> = ({ theme, toggleTheme }) => {
 
   if (!theme) return null
 
+  const themeToggle = theme === 'light' ? 'dark' : 'light'
+
   return (
     <div
-      onClick={() => !isMobile && toggleTheme()}
-      onTouchStart={() => isMobile && toggleTheme()}
+      onClick={() => !isMobile && setTheme(themeToggle)}
+      onTouchStart={() => isMobile && setTheme(themeToggle)}
       className='relative mt-3 cursor-pointer'>
       <input
         type='checkbox'
