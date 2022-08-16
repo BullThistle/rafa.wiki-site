@@ -7,12 +7,12 @@ export const Navbar: FC = () => {
   const { pathname } = useRouter()
   return (
     <nav className='py-3'>
-      <div className='container py-3 flex justify-between mx-auto max-w-xs sm:max-w-md md:max-w-lg'>
+      <div className='container mx-auto flex max-w-xs justify-between py-3 sm:max-w-md md:max-w-lg'>
         <div className='mb-1 self-center text-xl font-semibold text-purple'>
           <Link href='/'>rafa.wiki</Link>
         </div>
-        <div className='w-full pl-3 text-gray-700'>
-          <ul className='flex flex-row p-4 space-x-8 mt-0 text-sm font-medium'>
+        <div className='w-full pl-3'>
+          <ul className='mt-0 flex flex-row space-x-8 p-4 text-sm font-medium'>
             <li className={`${pathname === '/' && 'underline'} text-purple`}>
               <Link href='/'>Home</Link>
             </li>

@@ -2,10 +2,10 @@ import { Companies } from '../components/resume/companies'
 import { RightColumnItems } from '../components/resume/right-column-items'
 
 const Resume = () => (
-  <div className='justify-center flex'>
-    <div className='sm:flex sm:flex-auto sm:flex-nowrap max-w-4xl mb-20'>
-      <div className='flex-auto max-w-2xl pr-8 pl-8'>
-        <p className='text-2xl font-bold top-16 left-7'>RAFAEL FURRY</p>
+  <div className='flex justify-center'>
+    <div className='mb-20 max-w-4xl sm:flex sm:flex-auto sm:flex-nowrap'>
+      <div className='max-w-2xl flex-auto px-8'>
+        <p className='top-16 left-7 text-2xl font-bold'>RAFAEL FURRY</p>
         <p className='text-sm'>Full Stack Developer</p>
         <p className='mt-5 font-bold'>PROFILE</p>
         <p className='ml-3 mt-2 text-sm'>
@@ -14,15 +14,15 @@ const Resume = () => (
           optimizing tooling, and automating away repetition for myself and
           others.
         </p>
-        <p className='font-bold mt-3'>EXPERIENCE</p>
+        <p className='mt-3 font-bold'>EXPERIENCE</p>
         <div className='ml-5 text-sm'>
           <Companies />
         </div>
       </div>
       <div
         className={`
-					pl-8 mt-3 sm:pl-3 sm:mt-0  sm:flex-1 sm:flex-col sm:pr-8
-					sm:border-l-2 sm:border-light-gray sm:dark:border-gray
+					mt-3 pl-8 sm:mt-0 sm:flex-1  sm:flex-col sm:border-l-2 sm:border-light-gray
+					sm:pl-3 sm:pr-8 sm:dark:border-gray
 				`}>
         <RightColumnItems />
       </div>

@@ -5,7 +5,7 @@ import { About } from '../components/about'
 
 const Home: NextPage = () => {
   return (
-    <div className='max-w-xs sm:max-w-sm mx-auto mt-10'>
+    <div className='mx-auto mt-10 max-w-xs sm:max-w-sm'>
       <div className='flex flex-col gap-6'>
         <Header />
         <About />

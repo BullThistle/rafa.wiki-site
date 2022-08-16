@@ -63,7 +63,7 @@ const companies: Company[] = [
 ]
 
 const FormattedList: FC<{ listItems: string[] }> = ({ listItems }) => (
-  <ul className='list-disc ml-5'>
+  <ul className='ml-5 list-disc'>
     {listItems.map((listItem, id) => (
       <li key={`${listItem + id}`}>{listItem}</li>
     ))}

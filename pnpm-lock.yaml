@@ -7,6 +7,7 @@ specifiers:
   autoprefixer: ^10.4.8
   eslint: 8.21.0
   eslint-config-next: 12.2.4
+  eslint-plugin-tailwindcss: ^3.6.0
   next: 12.2.4
   next-themes: ^0.2.0
   postcss: ^8.4.16
@@ -29,6 +30,7 @@ devDependencies:
   autoprefixer: 10.4.8_postcss@8.4.16
   eslint: 8.21.0
   eslint-config-next: 12.2.4_qugx7qdu5zevzvxaiqyxfiwquq
+  eslint-plugin-tailwindcss: 3.6.0
   postcss: 8.4.16
   prettier: 2.7.1
   tailwindcss: 3.1.8
@@ -916,6 +918,17 @@ packages:
       resolve: 2.0.0-next.4
       semver: 6.3.0
       string.prototype.matchall: 4.0.7
+    dev: true
+
+  /eslint-plugin-tailwindcss/3.6.0:
+    resolution: {integrity: sha512-gWLGNWHuhh5ngwkJ2sgSByanpRw2s5GdrM2ff2/w8Ho2mWh2MyGvpnFZpL4b0XT/C0WF9zlq57+vFHJOeFhMkg==}
+    engines: {node: '>=12.13.0'}
+    dependencies:
+      fast-glob: 3.2.11
+      postcss: 8.4.16
+      tailwindcss: 3.1.8
+    transitivePeerDependencies:
+      - ts-node
     dev: true
 
   /eslint-scope/7.1.1:

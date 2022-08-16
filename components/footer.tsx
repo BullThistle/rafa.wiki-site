@@ -1,9 +1,9 @@
 import Link from 'next/link'
 
 export const Footer = () => (
-  <div className='border-t-2 border-light-gray dark:border-gray pt-4 px-2 flex justify-between text-sm'>
+  <div className='flex justify-between border-t-2 border-light-gray px-2 pt-4 text-sm dark:border-gray'>
     <div className='text-gray'>© 2022 by Rafael Furry</div>
-    <div className='text-sm hover:cursor-pointer text-purple'>
+    <div className='text-sm text-purple hover:cursor-pointer'>
       <Link href='https://github.com/BullThistle/portfolio'>source code</Link>
     </div>
   </div>
