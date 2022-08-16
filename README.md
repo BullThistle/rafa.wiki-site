@@ -7,13 +7,15 @@ Made with TypeScript, Next.js, and Tailwind CSS
 ## Usage
 
 ### Install Dependencies
+
 ```bash
-yarn install
+pnpm install
 ```
 
-### Run Dev Server (http://localhost:3000) 
+### Run Dev Server (http://localhost:3000)
+
 ```bash
-yarn run dev
+pnpm run dev
 ```
 
 ## TODO:
