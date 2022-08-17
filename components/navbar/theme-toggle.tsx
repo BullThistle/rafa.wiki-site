@@ -24,8 +24,8 @@ export const ThemeToggle: FC = () => {
         className='peer sr-only'
         checked={theme === 'light' ? false : true}
         // Empty function to suppress react error saying onChange
-        // is needed when checked is used. Using onClick instead
-        onChange={() => {}}
+        // is needed when checked is used. Using onClick and onTouchStart instead
+        onChange={() => {}} // eslint-disable-line @typescript-eslint/no-empty-function
       />
       <div
         className={`
